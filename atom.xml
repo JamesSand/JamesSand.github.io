@@ -6,7 +6,7 @@
   <link href="http://jamessand.github.io/atom.xml" rel="self"/>
   
   <link href="http://jamessand.github.io/"/>
-  <updated>2022-07-20T09:21:35.120Z</updated>
+  <updated>2022-07-20T15:06:03.064Z</updated>
   <id>http://jamessand.github.io/</id>
   
   <author>
@@ -17,13 +17,53 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>python_string_cluster</title>
+    <link href="http://jamessand.github.io/2022/07/20/python-string-cluster/"/>
+    <id>http://jamessand.github.io/2022/07/20/python-string-cluster/</id>
+    <published>2022-07-20T14:47:24.000Z</published>
+    <updated>2022-07-20T15:06:03.064Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="字符串相似度"><a href="#字符串相似度" class="headerlink" title="字符串相似度"></a>字符串相似度</h2><h3 id="Levenshtein"><a href="#Levenshtein" class="headerlink" title="Levenshtein"></a>Levenshtein</h3><p>一个基于 编辑距离 实现的字符串相似度</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Levenshtein</span><br><span class="line"> </span><br><span class="line">str_list = [<span class="string">&quot;你好&quot;</span>, <span class="string">&quot;今天天气很好&quot;</span>, <span class="string">&quot;明天去吃大餐&quot;</span>, <span class="string">&quot;我喜欢编程&quot;</span>]</span><br><span class="line">string = <span class="string">&quot;天气正好好&quot;</span></span><br><span class="line"> </span><br><span class="line">score_list = []</span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> str_list:</span><br><span class="line">    <span class="comment"># 计算编辑距离相似度，即莱文斯坦比</span></span><br><span class="line">    score = Levenshtein.ratio(string, i)</span><br><span class="line">    score_list.append(score)</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;%s 与其他字符串的相似度分别为&quot;</span> % string)</span><br><span class="line"><span class="built_in">print</span>(str_list)</span><br><span class="line"><span class="built_in">print</span>(score_list)</span><br></pre></td></tr></table></figure><h3 id="difflib"><a href="#difflib" class="headerlink" title="difflib"></a>difflib</h3><p>不知道是怎么算的，但是感觉结果好像差不太多</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> difflib</span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">string_similar</span>(<span class="params">s1, s2</span>):</span><br><span class="line">    <span class="keyword">return</span> difflib.SequenceMatcher(<span class="literal">None</span>, s1, s2).quick_ratio()</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span> (string_similar(<span class="string">&#x27;爱尔眼科沪滨医院&#x27;</span>, <span class="string">&#x27;沪滨爱尔眼科医院&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span> (string_similar(<span class="string">&#x27;安定区妇幼保健站&#x27;</span>, <span class="string">&#x27;定西市安定区妇幼保健站&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span> (string_similar(<span class="string">&#x27;广州市医院&#x27;</span>, <span class="string">&#x27;广东省中医院&#x27;</span>))</span><br></pre></td></tr></table></figure><h2 id="字符串聚类"><a href="#字符串聚类" class="headerlink" title="字符串聚类"></a>字符串聚类</h2>]]></content>
+    
+    
+    <summary type="html">用 Python 实现的一些字符串聚类</summary>
+    
+    
+    
+    <category term="技术" scheme="http://jamessand.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="Python_字符串聚类" scheme="http://jamessand.github.io/tags/Python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%81%9A%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TOFEL_writing</title>
+    <link href="http://jamessand.github.io/2022/07/20/TOFEL-writing/"/>
+    <id>http://jamessand.github.io/2022/07/20/TOFEL-writing/</id>
+    <published>2022-07-20T09:34:44.000Z</published>
+    <updated>2022-07-20T14:14:08.227Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="独立写作"><a href="#独立写作" class="headerlink" title="独立写作"></a>独立写作</h2><h3 id="文章结构"><a href="#文章结构" class="headerlink" title="文章结构"></a>文章结构</h3><h4 id="一边倒"><a href="#一边倒" class="headerlink" title="一边倒"></a>一边倒</h4><img src="/2022/07/20/TOFEL-writing/%E4%B8%80%E8%BE%B9%E5%80%92.png" class=""><p>主体段替换表达</p><ul><li>To begin with &#x3D; First of all </li><li>In addition &#x3D;  On top of that</li><li>Lastly &#x3D; Last but not the least &#x3D; Furthermore</li></ul><h4 id="让步转折"><a href="#让步转折" class="headerlink" title="让步转折"></a>让步转折</h4><img src="/2022/07/20/TOFEL-writing/%E8%AE%A9%E6%AD%A5%E8%BD%AC%E6%8A%98.png" class=""><h4 id="陈述-递进-驳倒"><a href="#陈述-递进-驳倒" class="headerlink" title="陈述-递进-驳倒"></a>陈述-递进-驳倒</h4><img src="/2022/07/20/TOFEL-writing/%E9%99%88%E8%BF%B0%E5%8F%8D%E9%A9%B3.png" class=""><blockquote><p>这种结构和上一种结构的区别在于，这种结构在转折-驳倒段要说明的是对方观点的好处可仍然可以被己方观点所实现。</p></blockquote><h3 id="开头段"><a href="#开头段" class="headerlink" title="开头段"></a>开头段</h3><p>倒金字塔模型。从社会现象到人们的观点，再到自己的观点。</p><p>从宏观逐渐具体。</p><ol><li><p>陈述现象</p></li><li><p>表现争论</p></li><li><p>给出自己的观点</p></li></ol><h4 id="话题导入"><a href="#话题导入" class="headerlink" title="话题导入"></a>话题导入</h4><ul><li>描述一个现象<ul><li><strong>It is quite common these days for</strong> people, especially teenagers <strong>to</strong> use various electronic devices in their daily life. </li><li>The increasing popularity of electronic devices <strong>has become a significant feature of mordern life in many developed countries.</strong> </li><li><strong>A problem of mordern education is</strong> the declining level of learning efficiency among some students. </li><li><strong>It has been a common dilemma(两难境地) for people to choose between</strong> work and family. </li><li><strong>There are many</strong> learning styles, <strong>and it is important that we</strong> look for classes <strong>that</strong> match our academic preferences. </li><li><strong>Society generally holds the idea that</strong> people who graduate from a overseas institution are stronger job candidates in terms of(就…而言) their language abilities and expansive thinking in global context.</li></ul></li><li>根据时间做对比<ul><li><strong>In the past</strong>, the teaching and learning tools in class were restricted to the blackboard, the chalk, the textbook; <strong>these days</strong>, the Ipad, the laptop and many other electronic devices have become part of the class.</li></ul></li></ul><h4 id="引出题目问题"><a href="#引出题目问题" class="headerlink" title="引出题目问题"></a>引出题目问题</h4><ul><li>引发争论<ul><li>Some people think that…, while others believe that…</li><li>On the one hand, … On the other hand, …</li><li>People have different views about whether …</li></ul></li><li>引出一方观点<ul><li>Some people &#x2F; educationalists &#x2F; scientists … think that …</li><li>Many people preferr (to do) sth.</li><li>It is argued that …</li><li>Taking into account …, some people propose that …</li></ul></li></ul><h4 id="明确观点"><a href="#明确观点" class="headerlink" title="明确观点"></a>明确观点</h4><ul><li>Personally, I believe that…</li><li>From my perspective, …</li><li>As for me, …</li><li>In my case, …</li></ul><blockquote><p>说实话，这个还不如我之前在新东方学的。所以我打算复习新东方的写作材料，同时再去 itaki 上找 teacher Jamse</p></blockquote>]]></content>
+    
+    
+    <summary type="html">托福写作套路整合，多路方法大杂烩</summary>
+    
+    
+    
+    <category term="TOFEL" scheme="http://jamessand.github.io/categories/TOFEL/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>僵尸网络流量分析</title>
     <link href="http://jamessand.github.io/2022/07/18/Zombi-traffic/"/>
     <id>http://jamessand.github.io/2022/07/18/Zombi-traffic/</id>
     <published>2022-07-18T14:22:15.000Z</published>
-    <updated>2022-07-20T09:21:35.120Z</updated>
+    <updated>2022-07-20T15:06:06.507Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="http-流量占-tcp-流量的比重"><a href="#http-流量占-tcp-流量的比重" class="headerlink" title="http 流量占 tcp 流量的比重"></a>http 流量占 tcp 流量的比重</h2><blockquote><p> 因为 tcp 流量实在分析不了，只能入手 http 流量，看看这么搞是不是合理的</p></blockquote><p>不幸的是 <code>2022-03-31-2000-tcp.pcap</code></p><p>里边只有 255 http 流量，但是有 3766382 tcp 流量，所以我们还是要回到 tcp port 的聚类上。</p><h2 id="tar-解析"><a href="#tar-解析" class="headerlink" title="tar 解析"></a>tar 解析</h2><blockquote><p>tar -&gt; rawtar_paser.py</p></blockquote><ul><li>因为我觉得每次解压缩 tar 太慢也太麻烦，所以我先将 pcap 中我需要的内容提炼到 json 文件中。</li><li>基于 tar_parser.py 实现。</li></ul><h2 id="提取每个压缩包中-IP-来访次数和来访端口号"><a href="#提取每个压缩包中-IP-来访次数和来访端口号" class="headerlink" title="提取每个压缩包中 IP 来访次数和来访端口号"></a>提取每个压缩包中 IP 来访次数和来访端口号</h2><blockquote><p>raw -&gt; ip_countip_port_counter.py</p></blockquote><p>在 ip_port_count.py 里边实现了，这一次我们采用的是每个 4h 时间段统计一次。</p><h2 id="基于-jaccard-和-dest-port-的-IP-cluster"><a href="#基于-jaccard-和-dest-port-的-IP-cluster" class="headerlink" title="基于 jaccard 和 dest port 的 IP cluster"></a>基于 jaccard 和 dest port 的 IP cluster</h2><blockquote><p>ip_count -&gt; jaccard_clusterjaccard_cluster.py</p></blockquote><ul><li><p>用 IP 所访问的端口以及端口次数作为标识，借助 jaccard 相似度对 IP 进行聚类。</p></li><li><p>我们采取若干天的 jaccard 平均值作为每个 IP 之间的评判依据。</p></li><li><p>根据 1 的门槛，我发现不同的聚类之间的 tcp payload 中的内容仍然极度相似，所以打算继续降低门槛。</p></li></ul><h2 id="进一步借助来访次数"><a href="#进一步借助来访次数" class="headerlink" title="进一步借助来访次数"></a>进一步借助来访次数</h2><ul><li>上一步中虽然我们通过 jaccard 相似度进行了分类，但是有可能存在一堆来访次数很少的端口，所以这一步我们借助来访次数进行进一步筛选</li><li>定义 ignore_threshold，将最多来访次数低于 ignore_threshold 的 IP 聚类忽略掉，这样我们获得的每一个聚类不断有 IP 的数量，还有最多来访次数。</li></ul><h2 id="专注于多的来访"><a href="#专注于多的来访" class="headerlink" title="专注于多的来访"></a>专注于多的来访</h2><h3 id="IP-和访问次数都多"><a href="#IP-和访问次数都多" class="headerlink" title="IP 和访问次数都多"></a>IP 和访问次数都多</h3><ul><li>注意到有一个 IP 聚类中存在 32 个 IP，同时最多来访次数是 323，观察了其中每个时间段的来访，都是很高的水平（大于 100）。</li><li>通过 wireshark 观察一些 IP 的来访包，其中包括如下几部分内容<ul><li>系统号：Win 2012；Win XP；Win7</li><li>SP*：SP0；SP1；SP3</li><li>内存：*** MB</li><li>带宽：*** bps</li></ul></li></ul><p><img src="C:\Users\James\AppData\Roaming\Typora\typora-user-images\image-20220719130803386.png" alt="image-20220719130803386"></p><h3 id="访问次数多"><a href="#访问次数多" class="headerlink" title="访问次数多"></a>访问次数多</h3><ul><li>除了上述这种文武双全的，还有一个聚类里边有 6 个 IP 但是却又 632 次访问。</li><li>这个 IP 聚类的 payload 结构和上边的聚类的结构差不多，只是所有的系统版本都是 Win2003 的</li></ul><p><img src="C:\Users\James\AppData\Roaming\Typora\typora-user-images\image-20220719133001459.png" alt="image-20220719133001459"></p><h3 id="IP-数量少"><a href="#IP-数量少" class="headerlink" title="IP 数量少"></a>IP 数量少</h3><ul><li>求异心理，所以我就看了看 IP 数量最少的 IP 聚类，最高访问次数只有 48 次。</li><li>特点是所有系统版本都是 Win7 的。</li></ul><p><img src="C:\Users\James\AppData\Roaming\Typora\typora-user-images\image-20220719133327348.png" alt="image-20220719133327348"></p><h2 id="访问特征统计"><a href="#访问特征统计" class="headerlink" title="访问特征统计"></a>访问特征统计</h2><blockquote><p>raw &amp; jaccard_cluster -&gt; jacccard_clusterfeature_count.py</p></blockquote><ul><li>jaccard 和最多来访次数都证明了这些聚类分的并没有什么错，所以我打算统计 payload 里边的内容的分布。</li><li>由于内存和 CPU 功率以及带宽都并不具有统计意义，所以这里只统计系统编号以及神秘的 SP</li><li>想做的是统计每一个 cluster 的 payload 中关键字的参数并放回到 jaccard_cluster 文件夹的对应文件当中。</li></ul><p>所有访问大头的都是发配置？</p><p>http 关联回去 tcp </p><p>IP 地址和配置信息一一对应</p><p>发送目的端口不是常用的端口</p><p>4 月 20 号开始，观察 http 请求</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="http-流量占-tcp-流量的比重"><a href="#http-流量占-tcp-流量的比重" class="headerlink" title="http 流量占 tcp 流量的比重"></a>http 流量占 tcp 流量的比重</h2><blockquote><p> 因为 tcp 流量实在分析不了，只能入手 http 流量，看看这么搞是不是合理的</p></blockquote><p>不幸的是 <code>2022-03-31-2000-tcp.pcap</code></p><p>里边只有 255 http 流量，但是有 3766382 tcp 流量，所以我们还是要回到 tcp port 的聚类上。</p><h2 id="tar-解析"><a href="#tar-解析" class="headerlink" title="tar 解析"></a>tar 解析</h2><blockquote><p>tar -&gt; rawtar_paser.py</p></blockquote><ul><li>因为我觉得每次解压缩 tar 太慢也太麻烦，所以我先将 pcap 中我需要的内容提炼到 json 文件中。</li><li>基于 tar_parser.py 实现。</li></ul><h2 id="提取每个压缩包中-IP-来访次数和来访端口号"><a href="#提取每个压缩包中-IP-来访次数和来访端口号" class="headerlink" title="提取每个压缩包中 IP 来访次数和来访端口号"></a>提取每个压缩包中 IP 来访次数和来访端口号</h2><blockquote><p>raw -&gt; ip_countip_port_counter.py</p></blockquote><p>在 ip_port_count.py 里边实现了，这一次我们采用的是每个 4h 时间段统计一次。</p><h2 id="基于-jaccard-和-dest-port-的-IP-cluster"><a href="#基于-jaccard-和-dest-port-的-IP-cluster" class="headerlink" title="基于 jaccard 和 dest port 的 IP cluster"></a>基于 jaccard 和 dest port 的 IP cluster</h2><blockquote><p>ip_count -&gt; jaccard_clusterjaccard_cluster.py</p></blockquote><ul><li><p>用 IP 所访问的端口以及端口次数作为标识，借助 jaccard 相似度对 IP 进行聚类。</p></li><li><p>我们采取若干天的 jaccard 平均值作为每个 IP 之间的评判依据。</p></li><li><p>根据 1 的门槛，我发现不同的聚类之间的 tcp payload 中的内容仍然极度相似，所以打算继续降低门槛。</p></li></ul><h2 id="进一步借助来访次数"><a href="#进一步借助来访次数" class="headerlink" title="进一步借助来访次数"></a>进一步借助来访次数</h2><ul><li>上一步中虽然我们通过 jaccard 相似度进行了分类，但是有可能存在一堆来访次数很少的端口，所以这一步我们借助来访次数进行进一步筛选</li><li>定义 ignore_threshold，将最多来访次数低于 ignore_threshold 的 IP 聚类忽略掉，这样我们获得的每一个聚类不断有 IP 的数量，还有最多来访次数。</li></ul><h2 id="专注于多的来访"><a href="#专注于多的来访" class="headerlink" title="专注于多的来访"></a>专注于多的来访</h2><h3 id="IP-和访问次数都多"><a href="#IP-和访问次数都多" class="headerlink" title="IP 和访问次数都多"></a>IP 和访问次数都多</h3><ul><li>注意到有一个 IP 聚类中存在 32 个 IP，同时最多来访次数是 323，观察了其中每个时间段的来访，都是很高的水平（大于 100）。</li><li>通过 wireshark 观察一些 IP 的来访包，其中包括如下几部分内容<ul><li>系统号：Win 2012；Win XP；Win7</li><li>SP*：SP0；SP1；SP3</li><li>内存：*** MB</li><li>带宽：*** bps</li></ul></li></ul><img src="/2022/07/18/Zombi-traffic/32-323.png" class=""><h3 id="访问次数多"><a href="#访问次数多" class="headerlink" title="访问次数多"></a>访问次数多</h3><ul><li>除了上述这种文武双全的，还有一个聚类里边有 6 个 IP 但是却又 632 次访问。</li><li>这个 IP 聚类的 payload 结构和上边的聚类的结构差不多，只是所有的系统版本都是 Win2003 的</li></ul><img src="/2022/07/18/Zombi-traffic/6-632.png" class=""><h3 id="IP-数量少"><a href="#IP-数量少" class="headerlink" title="IP 数量少"></a>IP 数量少</h3><ul><li>求异心理，所以我就看了看 IP 数量最少的 IP 聚类，最高访问次数只有 48 次。</li><li>特点是所有系统版本都是 Win7 的。</li></ul><img src="/2022/07/18/Zombi-traffic/48.png" class=""><h2 id="访问特征统计"><a href="#访问特征统计" class="headerlink" title="访问特征统计"></a>访问特征统计</h2><blockquote><p>raw &amp; jaccard_cluster -&gt; jacccard_clusterfeature_count.py</p></blockquote><ul><li>jaccard 和最多来访次数都证明了这些聚类分的并没有什么错，所以我打算统计 payload 里边的内容的分布。</li><li>由于内存和 CPU 功率以及带宽都并不具有统计意义，所以这里只统计系统编号以及神秘的 SP</li><li>想做的是统计每一个 cluster 的 payload 中关键字的参数并放回到 jaccard_cluster 文件夹的对应文件当中。</li></ul><h1 id="这是一个分割线"><a href="#这是一个分割线" class="headerlink" title="这是一个分割线"></a>这是一个分割线</h1><p>昨天的讨论得出了一下几个结论：</p><ul><li>如果继续从 tcp 深入，那么只能通过调研那些傀儡机会给 C&amp;C 服务器发送主机配置。这种无异于大海捞针。</li><li>从 http 入手，可能会有一些漏洞利用的行为，但是僵尸网络的信息可能性不大。</li><li>从 dns 入手，之前看到过有一篇论文提到过通过 dns 中域名的相似程度，来判断是否是僵尸网络。不过这里我们借助的工具将是 360netlab 的 DGA(Domain generate algorithm) features 来帮助我们判断。</li></ul><p>以下是一些讨论中提到的问题：</p><ul><li><p>所有访问大头的都是发配置？</p></li><li><p>http 关联回去 tcp </p></li><li><p>IP 地址和配置信息一一对应？：是的</p></li><li><p>发送目的端口不是常用的端口（用于推断僵尸网络，并不能证明）</p></li><li><p>4 月 20 号开始，观察 http 请求</p></li></ul><h2 id="dns-请求中域名处理"><a href="#dns-请求中域名处理" class="headerlink" title="dns 请求中域名处理"></a>dns 请求中域名处理</h2><blockquote><p>log.txt 是 4.14 之后的 dns 流量，log.txt.0414 是 4.14 之前的 dns 流量</p></blockquote>]]></content>
     
     
     <summary type="html">在这里更新一下项目进展，看看能不能有 tricky 的东西出来</summary>
@@ -33,6 +73,8 @@
     <category term="科研" scheme="http://jamessand.github.io/categories/%E7%A7%91%E7%A0%94/"/>
     
     
+    <category term="traffic_analysis" scheme="http://jamessand.github.io/tags/traffic-analysis/"/>
+    
   </entry>
   
   <entry>
@@ -40,7 +82,7 @@
     <link href="http://jamessand.github.io/2022/07/18/Linux-command/"/>
     <id>http://jamessand.github.io/2022/07/18/Linux-command/</id>
     <published>2022-07-18T13:27:41.000Z</published>
-    <updated>2022-07-20T09:21:20.788Z</updated>
+    <updated>2022-07-20T09:25:09.310Z</updated>
     
     <content type="html"><![CDATA[<h2 id="查看目录的大小"><a href="#查看目录的大小" class="headerlink" title="查看目录的大小"></a>查看目录的大小</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du <span class="literal">-h</span> .</span><br></pre></td></tr></table></figure><ul><li>-h 代表 human可读， . 表示递归显示当前目录下所有目录的大小</li></ul><h2 id="文件移动指令"><a href="#文件移动指令" class="headerlink" title="文件移动指令"></a>文件移动指令</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> &lt;source file&gt; &lt;destination <span class="built_in">dir</span>&gt;</span><br></pre></td></tr></table></figure><h2 id="解压-tar-gz-文件"><a href="#解压-tar-gz-文件" class="headerlink" title="解压 tar.gz 文件"></a>解压 tar.gz 文件</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xzvf xxx.tar.gz</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -52,6 +94,8 @@
     <category term="技术" scheme="http://jamessand.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
+    <category term="Linux" scheme="http://jamessand.github.io/tags/Linux/"/>
+    
   </entry>
   
   <entry>
@@ -59,7 +103,7 @@
     <link href="http://jamessand.github.io/2022/07/17/July-diary/"/>
     <id>http://jamessand.github.io/2022/07/17/July-diary/</id>
     <published>2022-07-17T15:43:50.000Z</published>
-    <updated>2022-07-20T09:21:45.180Z</updated>
+    <updated>2022-07-20T09:25:05.238Z</updated>
     
     <content type="html"><![CDATA[<h2 id="2022-7-17"><a href="#2022-7-17" class="headerlink" title="2022.7.17"></a>2022.7.17</h2><h4 id="晚上-23-45"><a href="#晚上-23-45" class="headerlink" title="晚上 23:45"></a>晚上 23:45</h4><ul><li>今天下午开始研究 hexo，到了晚饭的时候基本上已经学会了。之前也有花过一下午学 hexo 但是不知道为什么当时就是没学会。可能自己和自己较劲的时候就是很难学进去东西的吧。</li><li>明天要回学校开红景天，希望能蹭一波学校公费医疗的福利。也许… 这也是我能从学校获取到的唯一的福利了吧。</li><li>最近在饭桌上总是被问到出国的事情，这让我 remake 的想法又增加了几分。我不知道自己有没有勇气做下这个看起来没那么理智的选择，或许我就是想逃避。我总是用一些当下形势下不可能做到的事情当做借口，逃离我现在所受到的苦难。</li><li>butterfly 还是没太搞明白，先这样吧，landscape 虽然丑，但是基本没有 bug！</li></ul>]]></content>
     
