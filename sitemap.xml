@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jamessand.github.io/2022/07/17/July-diary/</loc>
+    
+    <lastmod>2022-07-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://jamessand.github.io/2022/07/20/TOFEL-writing/</loc>
     
     <lastmod>2022-07-26</lastmod>
@@ -38,25 +47,7 @@
   </url>
   
   <url>
-    <loc>http://jamessand.github.io/2022/07/18/Zombi-traffic/</loc>
-    
-    <lastmod>2022-07-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://jamessand.github.io/2022/07/18/Linux-command/</loc>
-    
-    <lastmod>2022-07-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://jamessand.github.io/2022/07/17/July-diary/</loc>
     
     <lastmod>2022-07-20</lastmod>
     
@@ -125,14 +116,14 @@
     <priority>0.2</priority>
   </url>
   
+
+  
   <url>
-    <loc>http://jamessand.github.io/tags/traffic-analysis/</loc>
+    <loc>http://jamessand.github.io/categories/%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2022-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
-
   
   <url>
     <loc>http://jamessand.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
@@ -143,20 +134,6 @@
   
   <url>
     <loc>http://jamessand.github.io/categories/TOFEL/</loc>
-    <lastmod>2022-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://jamessand.github.io/categories/%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2022-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://jamessand.github.io/categories/%E7%A7%91%E7%A0%94/</loc>
     <lastmod>2022-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
