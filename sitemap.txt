@@ -1,6 +1,8 @@
-http://jamessand.github.io/2022/07/18/Zombi-traffic/
-http://jamessand.github.io/2022/07/20/python-string-cluster/
 http://jamessand.github.io/2022/07/20/TOFEL-writing/
+http://jamessand.github.io/2022/07/26/vocabulary-accumulation/
+http://jamessand.github.io/2022/07/26/Windows-tools/
+http://jamessand.github.io/2022/07/24/North-California-Summer-Research/
+http://jamessand.github.io/2022/07/18/Zombi-traffic/
 http://jamessand.github.io/2022/07/18/Linux-command/
 http://jamessand.github.io/2022/07/17/July-diary/
 http://jamessand.github.io/2022/07/17/Hello-World/
@@ -11,8 +13,7 @@ http://jamessand.github.io/tags/index.html
 http://jamessand.github.io/
 http://jamessand.github.io/tags/Linux/
 http://jamessand.github.io/tags/traffic-analysis/
-http://jamessand.github.io/tags/Python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%81%9A%E7%B1%BB/
 http://jamessand.github.io/categories/%E6%8A%80%E6%9C%AF/
-http://jamessand.github.io/categories/%E7%A7%91%E7%A0%94/
-http://jamessand.github.io/categories/%E8%AE%B0%E5%BD%95/
 http://jamessand.github.io/categories/TOFEL/
+http://jamessand.github.io/categories/%E8%AE%B0%E5%BD%95/
+http://jamessand.github.io/categories/%E7%A7%91%E7%A0%94/

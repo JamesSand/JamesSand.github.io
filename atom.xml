@@ -6,7 +6,7 @@
   <link href="http://jamessand.github.io/atom.xml" rel="self"/>
   
   <link href="http://jamessand.github.io/"/>
-  <updated>2022-07-20T15:06:03.064Z</updated>
+  <updated>2022-07-26T07:18:22.643Z</updated>
   <id>http://jamessand.github.io/</id>
   
   <author>
@@ -17,23 +17,58 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>python_string_cluster</title>
-    <link href="http://jamessand.github.io/2022/07/20/python-string-cluster/"/>
-    <id>http://jamessand.github.io/2022/07/20/python-string-cluster/</id>
-    <published>2022-07-20T14:47:24.000Z</published>
-    <updated>2022-07-20T15:06:03.064Z</updated>
+    <title>vocabulary_accumulation</title>
+    <link href="http://jamessand.github.io/2022/07/26/vocabulary-accumulation/"/>
+    <id>http://jamessand.github.io/2022/07/26/vocabulary-accumulation/</id>
+    <published>2022-07-26T06:39:45.000Z</published>
+    <updated>2022-07-26T07:18:22.643Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="字符串相似度"><a href="#字符串相似度" class="headerlink" title="字符串相似度"></a>字符串相似度</h2><h3 id="Levenshtein"><a href="#Levenshtein" class="headerlink" title="Levenshtein"></a>Levenshtein</h3><p>一个基于 编辑距离 实现的字符串相似度</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Levenshtein</span><br><span class="line"> </span><br><span class="line">str_list = [<span class="string">&quot;你好&quot;</span>, <span class="string">&quot;今天天气很好&quot;</span>, <span class="string">&quot;明天去吃大餐&quot;</span>, <span class="string">&quot;我喜欢编程&quot;</span>]</span><br><span class="line">string = <span class="string">&quot;天气正好好&quot;</span></span><br><span class="line"> </span><br><span class="line">score_list = []</span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> str_list:</span><br><span class="line">    <span class="comment"># 计算编辑距离相似度，即莱文斯坦比</span></span><br><span class="line">    score = Levenshtein.ratio(string, i)</span><br><span class="line">    score_list.append(score)</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;%s 与其他字符串的相似度分别为&quot;</span> % string)</span><br><span class="line"><span class="built_in">print</span>(str_list)</span><br><span class="line"><span class="built_in">print</span>(score_list)</span><br></pre></td></tr></table></figure><h3 id="difflib"><a href="#difflib" class="headerlink" title="difflib"></a>difflib</h3><p>不知道是怎么算的，但是感觉结果好像差不太多</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> difflib</span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">string_similar</span>(<span class="params">s1, s2</span>):</span><br><span class="line">    <span class="keyword">return</span> difflib.SequenceMatcher(<span class="literal">None</span>, s1, s2).quick_ratio()</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span> (string_similar(<span class="string">&#x27;爱尔眼科沪滨医院&#x27;</span>, <span class="string">&#x27;沪滨爱尔眼科医院&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span> (string_similar(<span class="string">&#x27;安定区妇幼保健站&#x27;</span>, <span class="string">&#x27;定西市安定区妇幼保健站&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span> (string_similar(<span class="string">&#x27;广州市医院&#x27;</span>, <span class="string">&#x27;广东省中医院&#x27;</span>))</span><br></pre></td></tr></table></figure><h2 id="字符串聚类"><a href="#字符串聚类" class="headerlink" title="字符串聚类"></a>字符串聚类</h2>]]></content>
-    
-    
-    <summary type="html">用 Python 实现的一些字符串聚类</summary>
+    <content type="html"><![CDATA[<h2 id="教育类"><a href="#教育类" class="headerlink" title="教育类"></a>教育类</h2><p>高等教育 &#x3D; higher education &#x3D; tertiary education</p><p>精神放松 &#x3D; loosen up &#x3D; boost mental well-being</p><h2 id="形容词"><a href="#形容词" class="headerlink" title="形容词"></a>形容词</h2><h4 id="实用的"><a href="#实用的" class="headerlink" title="实用的"></a>实用的</h4><p>practical &#x3D; pragmatic </p><h2 id="一些其他的"><a href="#一些其他的" class="headerlink" title="一些其他的"></a>一些其他的</h2><p>听起来很合理 &#x3D; reasonable as it may be sound</p><blockquote><p>However, form my perspective, reasonable as it may be sound, this view doest not hold water</p></blockquote>]]></content>
     
     
+    <summary type="html">TOFEL 词汇积累</summary>
     
-    <category term="技术" scheme="http://jamessand.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="Python_字符串聚类" scheme="http://jamessand.github.io/tags/Python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%81%9A%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows 工具合集</title>
+    <link href="http://jamessand.github.io/2022/07/26/Windows-tools/"/>
+    <id>http://jamessand.github.io/2022/07/26/Windows-tools/</id>
+    <published>2022-07-26T04:09:36.000Z</published>
+    <updated>2022-07-26T04:54:15.717Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="可视化内存"><a href="#可视化内存" class="headerlink" title="可视化内存"></a>可视化内存</h2><p>SpaceSniffer</p><p>可视化磁盘内存空间</p><img src="/2022/07/26/Windows-tools/SnifferDemo.png" class="">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;可视化内存&quot;&gt;&lt;a href=&quot;#可视化内存&quot; class=&quot;headerlink&quot; title=&quot;可视化内存&quot;&gt;&lt;/a&gt;可视化内存&lt;/h2&gt;&lt;p&gt;SpaceSniffer&lt;/p&gt;
+&lt;p&gt;可视化磁盘内存空间&lt;/p&gt;
+&lt;img src=&quot;/2022/07/26/Wi</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>North_California_Summer_Research</title>
+    <link href="http://jamessand.github.io/2022/07/24/North-California-Summer-Research/"/>
+    <id>http://jamessand.github.io/2022/07/24/North-California-Summer-Research/</id>
+    <published>2022-07-24T11:30:22.000Z</published>
+    <updated>2022-07-24T17:04:02.754Z</updated>
+    
+    <content type="html"><![CDATA[<p>经过 proposal 的讨论之后，Min Chi 建议我们做 TICC 和 HMM 的对比</p><h2 id="TICC-论文"><a href="#TICC-论文" class="headerlink" title="TICC 论文"></a>TICC 论文</h2><h3 id="概念准备"><a href="#概念准备" class="headerlink" title="概念准备"></a>概念准备</h3><h4 id="多元时间序列分析"><a href="#多元时间序列分析" class="headerlink" title="多元时间序列分析"></a>多元时间序列分析</h4><p>一个时间戳下，有多个观测量。而研究多个观测量随时间变化的关系以及它们之间相关的关系称为多元时间序列分析。</p><h4 id="马尔科夫随机场"><a href="#马尔科夫随机场" class="headerlink" title="马尔科夫随机场"></a>马尔科夫随机场</h4><ul><li>马尔科夫性质：当前状态只和前一个状态有关。</li><li>随机场：位置 (site) 和 相空间 (phase space) 两个概念。给每一个位置中按照某种分布随机赋予相空间中的一个值之后，其全体称为随机场。例如给农田里种上随机种类的庄稼。</li><li>马尔科夫随机场：任何一个农田庄稼的种类只和相邻地块的庄稼有关，和别的地方的庄稼无关。</li></ul><h3 id="论文大意"><a href="#论文大意" class="headerlink" title="论文大意"></a>论文大意</h3><p>多元时间序列中子序列聚类问题。（例如将健身环节分成步行、坐着、跑步等阶段）</p><p>难点在于需要对时间序列进行分割和聚类；并且需要解释每一个聚类。</p><p>TICC 可以解决上述两个问题。并且通过汽车传感器数据集上体现对现实场景中数据的处理及解释。</p><h3 id="算法大意"><a href="#算法大意" class="headerlink" title="算法大意"></a>算法大意</h3><p>在每一个 cluster 中用网络来表示，通过模型预测 t 时刻的网络的每一部分是如何影响 t + 1 时刻的网络的每一部分的。这种网络之间的影响在每个 cluster 中都不一样。</p>]]></content>
+    
+    
+    <summary type="html">北卡暑研项目，希望不要摆烂</summary>
+    
+    
+    
     
   </entry>
   
@@ -42,12 +77,12 @@
     <link href="http://jamessand.github.io/2022/07/20/TOFEL-writing/"/>
     <id>http://jamessand.github.io/2022/07/20/TOFEL-writing/</id>
     <published>2022-07-20T09:34:44.000Z</published>
-    <updated>2022-07-20T14:14:08.227Z</updated>
+    <updated>2022-07-26T15:01:24.936Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="独立写作"><a href="#独立写作" class="headerlink" title="独立写作"></a>独立写作</h2><h3 id="文章结构"><a href="#文章结构" class="headerlink" title="文章结构"></a>文章结构</h3><h4 id="一边倒"><a href="#一边倒" class="headerlink" title="一边倒"></a>一边倒</h4><img src="/2022/07/20/TOFEL-writing/%E4%B8%80%E8%BE%B9%E5%80%92.png" class=""><p>主体段替换表达</p><ul><li>To begin with &#x3D; First of all </li><li>In addition &#x3D;  On top of that</li><li>Lastly &#x3D; Last but not the least &#x3D; Furthermore</li></ul><h4 id="让步转折"><a href="#让步转折" class="headerlink" title="让步转折"></a>让步转折</h4><img src="/2022/07/20/TOFEL-writing/%E8%AE%A9%E6%AD%A5%E8%BD%AC%E6%8A%98.png" class=""><h4 id="陈述-递进-驳倒"><a href="#陈述-递进-驳倒" class="headerlink" title="陈述-递进-驳倒"></a>陈述-递进-驳倒</h4><img src="/2022/07/20/TOFEL-writing/%E9%99%88%E8%BF%B0%E5%8F%8D%E9%A9%B3.png" class=""><blockquote><p>这种结构和上一种结构的区别在于，这种结构在转折-驳倒段要说明的是对方观点的好处可仍然可以被己方观点所实现。</p></blockquote><h3 id="开头段"><a href="#开头段" class="headerlink" title="开头段"></a>开头段</h3><p>倒金字塔模型。从社会现象到人们的观点，再到自己的观点。</p><p>从宏观逐渐具体。</p><ol><li><p>陈述现象</p></li><li><p>表现争论</p></li><li><p>给出自己的观点</p></li></ol><h4 id="话题导入"><a href="#话题导入" class="headerlink" title="话题导入"></a>话题导入</h4><ul><li>描述一个现象<ul><li><strong>It is quite common these days for</strong> people, especially teenagers <strong>to</strong> use various electronic devices in their daily life. </li><li>The increasing popularity of electronic devices <strong>has become a significant feature of mordern life in many developed countries.</strong> </li><li><strong>A problem of mordern education is</strong> the declining level of learning efficiency among some students. </li><li><strong>It has been a common dilemma(两难境地) for people to choose between</strong> work and family. </li><li><strong>There are many</strong> learning styles, <strong>and it is important that we</strong> look for classes <strong>that</strong> match our academic preferences. </li><li><strong>Society generally holds the idea that</strong> people who graduate from a overseas institution are stronger job candidates in terms of(就…而言) their language abilities and expansive thinking in global context.</li></ul></li><li>根据时间做对比<ul><li><strong>In the past</strong>, the teaching and learning tools in class were restricted to the blackboard, the chalk, the textbook; <strong>these days</strong>, the Ipad, the laptop and many other electronic devices have become part of the class.</li></ul></li></ul><h4 id="引出题目问题"><a href="#引出题目问题" class="headerlink" title="引出题目问题"></a>引出题目问题</h4><ul><li>引发争论<ul><li>Some people think that…, while others believe that…</li><li>On the one hand, … On the other hand, …</li><li>People have different views about whether …</li></ul></li><li>引出一方观点<ul><li>Some people &#x2F; educationalists &#x2F; scientists … think that …</li><li>Many people preferr (to do) sth.</li><li>It is argued that …</li><li>Taking into account …, some people propose that …</li></ul></li></ul><h4 id="明确观点"><a href="#明确观点" class="headerlink" title="明确观点"></a>明确观点</h4><ul><li>Personally, I believe that…</li><li>From my perspective, …</li><li>As for me, …</li><li>In my case, …</li></ul><blockquote><p>说实话，这个还不如我之前在新东方学的。所以我打算复习新东方的写作材料，同时再去 itaki 上找 teacher Jamse</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="独立写作"><a href="#独立写作" class="headerlink" title="独立写作"></a>独立写作</h2><h3 id="开头段"><a href="#开头段" class="headerlink" title="开头段"></a>开头段</h3><p>三要素：</p><ol><li>社会背景</li><li>改写题中观点</li><li>自己观点</li></ol><h4 id="模板1"><a href="#模板1" class="headerlink" title="模板1"></a>模板1</h4><p>… has long been the center of public attention.</p><p>Some people claim that …</p><p>However, from my perspective, …</p><h4 id="模板2"><a href="#模板2" class="headerlink" title="模板2"></a>模板2</h4><p>将模板1的第一句话替换为</p><p>When it comes to …, opinions vary, based on people’s diverse backgrounds, experiences, and values. </p><h6 id="模板中的替换"><a href="#模板中的替换" class="headerlink" title="模板中的替换"></a>模板中的替换</h6><blockquote><p><u>Some</u> people claim that</p></blockquote><p>&#x3D; a large propotion of</p><p>&#x3D; the vast majority of </p><blockquote><p>Some people <u>claim</u> that</p></blockquote><p>&#x3D; argue &#x2F; <strong>deem</strong> &#x2F; <strong>reckon</strong> </p><p>&#x3D; <strong>opt to do</strong> </p><blockquote><p><u>However</u>, from my perspective</p></blockquote><p>&#x3D; Nevertheless</p><p>&#x3D; Nonetheless</p><blockquote><p>However, from my perspective</p></blockquote><p>&#x3D; as far as I see</p><p>&#x3D; as far as I am concerned</p><p>&#x3D; from my point of view</p><p>&#x3D; in my opinion </p><h6 id="表达观点"><a href="#表达观点" class="headerlink" title="表达观点"></a>表达观点</h6><p>xxx brings more merits &#x2F; benefits</p><p>this view does not hold water</p><h3 id="结尾段"><a href="#结尾段" class="headerlink" title="结尾段"></a>结尾段</h3><p><strong>模板</strong></p><p>(1) All in all &#x2F; To sum up &#x2F; In conclusion &#x2F; In a nutshell &#x2F; On the whole, …</p><p>(2) </p><ul><li><p>from what has been discussed above, </p></li><li><p>taking into account all the factors discussed above, </p></li><li><p>considering all the factors above, </p></li><li><p>from all the analysis above,</p></li></ul><p>(3) it is <u>safe &#x2F; natural &#x2F; reasonable</u> to <u>come to &#x2F; draw &#x2F; reach &#x2F; arrive at</u> the conclusion that + 全文总论点同义改写</p><h3 id="段落展开"><a href="#段落展开" class="headerlink" title="段落展开"></a>段落展开</h3><h4 id="举例方法"><a href="#举例方法" class="headerlink" title="举例方法"></a>举例方法</h4><p>举例技巧1  具体化 + 有效细节展开</p><p>举例技巧2 情节跌宕起伏，前后对比</p><blockquote><p>一个健康的例子，可以背一下</p></blockquote><p>Take my friend Jake, for an example. He used to love deep-fried food and sugar, staying at home all day <strong>without any physical activity</strong>(这里activity是活动，不可数). But when he was diagnosed with <strong>diabetes</strong> last year, he decided to make a change. </p><p>Now, apart from <strong>hitting the gym</strong> regularly and spending at least two hours there, he plays tennis every day with his wife. His weight went from 255 pounds to 180 pounds, and he has <strong>gotten rid of the disease</strong>. </p><h6 id="个例-x2F-事例"><a href="#个例-x2F-事例" class="headerlink" title="个例 &#x2F; 事例"></a>个例 &#x2F; 事例</h6><p>For example, …</p><p>Take … as an example.</p><p>My brother is a good <strong>case in point</strong>.</p><p>This point is best illustrated by the case of …</p><blockquote><p>一个电子产品的例子，可以背一下</p></blockquote><p>My little sister Amy is a good case in point. She used to be a <strong>painfully shy</strong> girl with few friends, since she spent most of her time studying and had no shared moments with friends. </p><p>However, things began to change after I taught her how to play Honor of Kings, <strong>a multiplayer online battle arena video game</strong>. This game allows her to <strong>connect with</strong> people and get feedback on how well she is playing. Besides, it creates plenty of topics to share with people around her, and now every day she plays the game with her classmates and they become <strong>faithful friends</strong>. </p><h6 id="举例常用细节"><a href="#举例常用细节" class="headerlink" title="举例常用细节"></a>举例常用细节</h6><ol><li>高中生 -&gt; 学校</li><li>工作者-&gt; 公司 + 工作职责</li><li>大学生 -&gt; 学校 + 专业</li></ol><p>高中: </p><p>​the school affiliated to Renmin University of China</p><p>工作者：</p><p>​Take my uncle Smith as an example. He is in charge of bussiness while working at Microsoft.  </p><p>​be in charge of (负责)</p>]]></content>
     
     
-    <summary type="html">托福写作套路整合，多路方法大杂烩</summary>
+    <summary type="html">托福写作套路整合</summary>
     
     
     
